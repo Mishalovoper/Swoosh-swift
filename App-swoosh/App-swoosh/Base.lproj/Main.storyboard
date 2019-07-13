@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="App_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="128.80000000000001" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="EUq-dj-pE3">
             <objects>
-                <viewController id="ZV9-4h-k9X" sceneMemberID="viewController">
+                <viewController id="ZV9-4h-k9X" customClass="LeagueVC" customModule="App_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qVi-aX-nPb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextClicked:" destination="ZV9-4h-k9X" eventType="touchUpInside" id="ppH-Y0-cQ1"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w2Q-oF-dEK">
                                 <rect key="frame" x="0.0" y="202.5" width="375" height="199"/>
@@ -109,6 +112,9 @@
                                         <state key="normal" title="MENS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mensTapped:" destination="ZV9-4h-k9X" eventType="touchUpInside" id="jJJ-go-qMk"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-b0-F1j" customClass="customButton" customModule="App_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="73" width="375" height="53"/>
@@ -117,6 +123,9 @@
                                         <state key="normal" title="WOMENS">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="womensTapped:" destination="ZV9-4h-k9X" eventType="touchUpInside" id="myH-ST-NrH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjZ-oR-IrL" customClass="customButton" customModule="App_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="146" width="375" height="53"/>
@@ -125,6 +134,9 @@
                                         <state key="normal" title="CO-ED">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="coedTapped:" destination="ZV9-4h-k9X" eventType="touchUpInside" id="edM-FQ-HIS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -170,16 +182,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GGH-CT-oMH"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="XAv-8t-SXn" id="JLx-7E-go4"/>
+                        <segue destination="M1B-fW-jkL" kind="show" identifier="skillVCSegue" id="kOj-E7-0ns"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baZ-W2-0nv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="isX-TZ-Zfo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="880.79999999999995" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="ujN-de-KY0">
             <objects>
-                <viewController id="M1B-fW-jkL" sceneMemberID="viewController">
+                <viewController id="M1B-fW-jkL" customClass="SkillVC" customModule="App_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BR8-d5-xRh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,6 +222,9 @@
                                         <state key="normal" title="Beginner">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="beginnerTouched:" destination="M1B-fW-jkL" eventType="touchUpInside" id="grx-Ud-JVB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c9-gK-7AV" customClass="customButton" customModule="App_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="192.5" y="0.0" width="162.5" height="53"/>
@@ -214,6 +233,9 @@
                                         <state key="normal" title="Baller">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="ballerSelected:" destination="M1B-fW-jkL" eventType="touchUpInside" id="erv-EA-YNc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -224,6 +246,10 @@
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="finishTapped:" destination="M1B-fW-jkL" eventType="touchUpInside" id="gKt-Os-qYU"/>
+                                    <segue destination="tlG-1I-LBa" kind="show" identifier="endSegue" id="Den-Fy-Qeg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -249,6 +275,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="niw-FL-Tx8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1624.8" y="116.49175412293854"/>
+        </scene>
+        <!--EndVC-->
+        <scene sceneID="uuO-Wr-6eW">
+            <objects>
+                <viewController id="tlG-1I-LBa" customClass="EndVC" customModule="App_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rtF-YD-khv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired League : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBf-ac-DxJ">
+                                <rect key="frame" x="25" y="266" width="274" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Skill selected : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNS-b7-teB">
+                                <rect key="frame" x="25" y="309" width="274" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SkO-7x-8eZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="desiredLabel" destination="xBf-ac-DxJ" id="rnA-0c-xWN"/>
+                        <outlet property="skillLabel" destination="zNS-b7-teB" id="qWD-go-Kbl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ksi-xG-Cjt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2296.8000000000002" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>
